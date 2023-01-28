@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+:root {
+    --josefin-sans: 'Josefin Sans', sans-serif;
+    --lato: 'Lato', sans-serif;
+    --open-sans: 'Open Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+header.page-header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+header nav.upper-nav-menu {
+    display: flex;
+    width: 100%;
+    background: linear-gradient(132.4deg, #7B999C 4.14%, #315C70 100%);
+    font-family: var(--josefin-sans);
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+header nav.upper-nav-menu a.upper-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+header nav.upper-nav-menu a.upper-item::before {
+    display: flex;
+    content: '';
+    width: 14px;
+    height: 14px;
+    margin: 0 5px;
+}
+
+header nav.upper-nav-menu a.upper-item.email::before {
+    background-image: url("../images/icons/email_icon.svg");
+    background-position: center;
+
+}
+
+header nav.upper-nav-menu a.upper-item.phone::before {
+    background-image: url("../images/icons/phone_icon.svg");
+    background-position: center;
+}
+
+header nav.upper-nav-menu a.upper-item.cart {
+    margin-left: 70px;
+}
+
+header nav.upper-nav-menu a.upper-item.cart::before {
+    background-image: url("../images/icons/cart_icon.svg");
+    background-position: center;
+}
+
+header nav.nav-menu {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--lato);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #315C70;
+    background-color: #fff;
+    padding: 0 70px;
+}
+
+header nav.nav-menu img {
+    width: 128px;
+    height: 128px;
+}
+
+header nav.nav-menu a.nav-item {
+    margin: 0 10px;
+    padding: 3px;
+    cursor: pointer;
+}
+
+a.buy-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 40px;
+    gap: 10px;
+    background: linear-gradient(135deg, #F87544 0%, #F54B0C 100%);
+    border-radius: 3px;
+    color: white;
+    font-family: var(--open-sans);
+    font-weight: normal;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, .45);
+}
+
+a.buy-button:hover {
+    background: linear-gradient(135deg, #fc6e3be3 0%, #ec4509e0 100%);
+}
+
+main.main-content {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+/* CONTEUDO DA PAGINA */
+
+header.main-header {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    font-family: var(--open-sans);
+    color: #315C70;
+    background: linear-gradient(121.53deg, #F3F9FF 0%, #F1F0FF 100%);
+}
+
+header div.header-item {
+    display: flex;
+    padding: 50px;
+    justify-content: center;
+}
+
+header div.header-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+header div.header-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 15px 0;
+}
+
+header div.header-links a.contact-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 40px;
+    margin: 10px;
+    background: #FFFFFF;
+    border-radius: 2px;
+    border-width: 1px;
+    border-style: solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(135deg, #F87544 0%, #F54B0C 100%);
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, .45);
+    cursor: pointer;
+}
+
+header div.header-links a.contact-button span {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #F87544 0%, #F54B0C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 400;
+    background-clip: text;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+header div.header-links a.contact-button span::before {
+    display: flex;
+    content: '';
+    width: 24px;
+    height: 24px;
+    margin: 0 5px;
+    background-image: url("../images/icons/whatsapp_icon.svg");
+    background-position: center;
+    background-size: cover;
+}
+
+header.main-header div.header-image img {
+    border-radius: 50%;
+    box-shadow: 40px -30px 1px #FFF;
+}
+
+header.main-header div.carrosel-menu {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 90%;
+}
+
+section.main-about-section,
+section.main-test-section {
+    display: flex;
+    font-family: var(--open-sans);
+    font-weight: 300;
+    font-size: 16px;
+    color: #315C70;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 50px;
+}
+
+section.main-test-section {
+    background: linear-gradient(121.53deg, #F3F9FF 0%, #F1F0FF 100%);
+    padding: 75px 50px;
+}
+
+section.main-about-section div,
+section.main-test-section div {
+    display: flex;
+    flex-direction: column;
+    max-width: 650px;
+    width: 100%;
+    height: 350px;
+    justify-content: space-between;
+}
+
+section.main-about-section div a,
+section.main-test-section div a {
+    width: 65%;
+    padding: 15px;
+}
+
+img.section-image {
+    border-radius: 50%;
+    border: 6px solid #315C70;
+    box-shadow: 40px -30px 1px #FFF;
+}
+
+
+section.main-reports-section {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--open-sans);
+    font-weight: 300;
+    font-size: 16px;
+    color: #315C70;
+    justify-content: space-between;
+    background: linear-gradient(121.53deg, #F3F9FF 0%, #F1F0FF 100%);
+    align-items: center;
+    padding: 25px 50px;
+}
+
+section.main-reports-section h3 {
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 38px;
+}
+
+section.main-reports-section h2 {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 44px;
+    color: #F54B0C;
+}
+
+section.main-reports-section p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 180%;
+    text-align: center;
+    color: #AFADB5;
+}
+
+section.main-reports-section div.reports-container {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+}
+
+section.main-reports-section div.reports-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 375px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, .25);
+    margin: 15px 20px;
+}
+
+section.main-reports-section div.reports-item div.marks img {
+    width: 15px;
+}
+
+section.main-reports-section div.reports-item p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12.5px;
+    text-align: start;
+    line-height: 180%;
+    color: #AFADB5;
+    margin: 2px 0;
+}
+
+section.main-reports-section div.reports-item div.reports-info {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    color: #252525;
+    font-weight: 700;
+    font-style: normal;
+    margin-top: 15px;
+}
+
+section.main-reports-section div.reports-item div.reports-info div {
+    display: flex;
+    align-items: center;
+}
+
+section.main-reports-section div.reports-item div.reports-info div img {
+    border-radius: 50%;
+}
+
+section.main-reports-section div.reports-item div.reports-info div span {
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+section.main-reports-section div.reports-item div.reports-info span.rate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+section.main-reports-section div.reports-item div.reports-info span.rate::before {
+    content: '';
+    display: flex;
+    width: 20px;
+    height: 20px;
+    margin: 0 10px;
+    background: url("../images/icons/star_icon.svg");
+    background-position: center;
+}
+
+section.main-done-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 50px;
+}
+
+section.main-done-section>h3 {
+    font-family: var(--open-sans);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 38px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(132.4deg, #7B999C 4.14%, #315C70 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+section.main-done-section>h2 {
+    font-family: var(--open-sans);
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 41px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #F87544 0%, #F54B0C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+section.main-done-section div.done-item-container{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+section.main-done-section div.done-item {
+    display: grid;
+    grid-template-rows: 20% 80%;
+    gap: 30px;
+    place-items: center;
+    width: 270px;
+    background: #FFFFFF;
+    box-shadow: 0px 8px 40px rgba(49, 32, 138, 0.05);
+    border-radius: 10px;
+}
+
+section.main-done-section div.done-item div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 200px;
+}
+
+section.main-done-section div.done-item h3 {
+    font-family: var(--open-sans);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    color: #315C70;
+}
+
+section.main-done-section div.done-item p {
+    font-family: var(--open-sans);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    color: rgba(26, 11, 91, 0.3);
+}
