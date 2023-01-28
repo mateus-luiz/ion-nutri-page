@@ -2,4 +2,4 @@
 
 Pagina feita seguindo o modelo criado no Figma
 
-https://github.com/mateus-luiz/ion-nutri-page.git
+https://mateus-luiz.github.io/ion-nutri-page/
